@@ -1,0 +1,167 @@
+﻿/* Блокова модель (Box Model) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Селектор тегу */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px;
+    border-bottom: 4px solid #1abc9c;
+    text-align: center;
+}
+
+/* Селектор ID */
+#main-title {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+/* Селектор класу */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Flexbox макет */
+.skills-grid {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-card {
+    flex: 1;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Селектор атрибутів */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+    /* Псевдоклас :focus */
+    input[type="text"]:focus {
+        outline: none;
+        border-color: #1abc9c;
+    }
+
+button {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    /* Псевдоклас :hover */
+    button:hover {
+        background-color: #16a085;
+    }
+
+/* Медіазапит для телефонів (вузьких екранів) */
+@media (max-width: 600px) {
+    .skills-grid {
+        flex-direction: column; /* Картки стають одна під одною */
+    }
+}
+/* Нічна тема */
+body.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+    body.dark-theme header,
+    body.dark-theme footer,
+    body.dark-theme .skill-card,
+    body.dark-theme .review-card,
+    body.dark-theme .modal-content {
+        background-color: #1e1e1e !important;
+        color: #f0f0f0 !important;
+        border-color: #333 !important;
+    }
+
+    body.dark-theme a {
+        color: #1abc9c;
+    }
+
+/* Картки відгуків */
+.review-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+}
+
+/* Модальне вікно */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+    .modal.hidden {
+        display: none;
+    }
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+    .modal-content form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-content input,
+    .modal-content textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: inherit;
+    }
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: inherit;
+}

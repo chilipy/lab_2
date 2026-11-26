@@ -1,16 +1,9 @@
 ﻿function Header() {
     return (
-        <header>
-            <h1>Олег Войценко</h1>
-            <p>Студент спеціальності «Кібербезпека та програмна інженерія»</p>
-            <p>
-                Email: oleg.voisenko@example.com | GitHub:{' '}
-                <a href="https://github.com" target="_blank" rel="noreferrer">
-                    github.com
-                </a>
-            </p>
+        <header className="bg-slate-900 text-white p-8 rounded-2xl shadow-lg text-center">
+            <h1 className="text-3xl font-bold tracking-wide">Олег Войценко</h1>
+            <p className="text-emerald-400 mt-2 font-medium">Кібербезпека та програмування (КБ-205)</p>
         </header>
     );
 }
-
 export default Header;

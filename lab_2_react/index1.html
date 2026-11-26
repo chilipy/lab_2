@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме — Олег Войценко</title>
+
+    <!-- 1. Зовнішній CSS (External) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 2. Внутрішній CSS (Internal) -->
+    <style>
+        footer {
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="main-title">Олег Войценко</h1>
+        <!-- 3. Вбудований CSS (Inline) -->
+        <p style="font-weight: bold; color: #1abc9c;">Студент групи КБ-205 | Кібербезпека & Програмування</p>
+        <p>Захоплююся аналізом мережевої безпеки, аудитом систем, розробкою інструментів на Python/C# та побудовою інфраструктури.</p>
+        <button id="theme-toggle" style="margin-top: 10px; padding: 8px 14px; cursor: pointer;">Змінити тему</button>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Досвід та Проєкти</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Junior Cybersecurity / Network Student</h3>
+                    <p><strong>Період:</strong> 2025 — Дотепер</p>
+                    <p><strong>Місце:</strong> Академічні & Практичні проєкти</p>
+                    <p>Розробка скриптів автоматизації безпеки на Python/C#, аудит мережевих заголовок (DevTools), налаштування L3-комутаторів та маршрутизаторів у Cisco Packet Tracer.</p>
+                    <p><strong>Навички:</strong> Python, C#, Cisco Packet Tracer, MySQL, Pandas</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 25px;">
+            <h2>Відгуки роботодавців</h2>
+            <div id="reviews-container">Завантаження відгуків...</div>
+        </section>
+
+        <section style="margin-top: 25px;">
+            <h2>Зворотний зв'язок</h2>
+            <form>
+                <!-- Поле для демонстрації селектора атрибутів та псевдокласів у CSS -->
+                <input type="text" placeholder="Введіть ваш email...">
+                <button type="submit" style="margin-top: 10px;">Надіслати</button>
+            </form>
+        </section>
+
+        <section style="margin-top: 25px;">
+            <h2>Освіта</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Бакалавр: Кібербезпека</h3>
+                    <p><strong>Заклад:</strong> Національний університет «Львівська політехніка»</p>
+                    <p><strong>Період:</strong> 2025 — Теперішній час</p>
+                    <p>Спеціалізація: Мережева безпека, аудит систем та програмування.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Олег Войценко</p>
+        <p>
+            <a href="https://github.com/chilipy" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+            <a href="mailto:student@example.com">Email</a>
+        </p>
+        <div id="system-info" style="margin-top: 10px; font-size: 0.85em; color: #6c757d;"></div>
+    </footer>
+
+    <!-- Модальне вікно зворотного зв'язку (з'являється через 1 хв) -->
+    <div id="feedback-modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn" title="Закрити">&times;</button>
+            <h3>Зворотний зв'язок</h3>
+            <form action="https://formspree.io/f/ВАШ_ЕНДПОЙНТ" method="POST">
+                <input type="text" name="name" placeholder="Ім'я" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Номер телефону" required>
+                <textarea name="message" placeholder="Повідомлення" rows="4" required></textarea>
+                <button type="submit">Надіслати</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

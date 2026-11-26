@@ -1,0 +1,87 @@
+﻿/* Блокова модель (Box Model) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Селектор тегу */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px;
+    border-bottom: 4px solid #1abc9c;
+    text-align: center;
+}
+
+/* Селектор ID */
+#main-title {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+/* Селектор класу */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Flexbox макет */
+.skills-grid {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-card {
+    flex: 1;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Селектор атрибутів */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+    /* Псевдоклас :focus */
+    input[type="text"]:focus {
+        outline: none;
+        border-color: #1abc9c;
+    }
+
+button {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    /* Псевдоклас :hover */
+    button:hover {
+        background-color: #16a085;
+    }
+
+/* Медіазапит для телефонів (вузьких екранів) */
+@media (max-width: 600px) {
+    .skills-grid {
+        flex-direction: column; /* Картки стають одна під одною */
+    }
+}
